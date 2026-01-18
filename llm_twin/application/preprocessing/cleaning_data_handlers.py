@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 from typing import Generic, TypeVar
 
-from llm_engineering.domain.cleaned_documents import (
+from llm_twin.domain.cleaned_documents import (
     CleanedArticleDocument,
     CleanedDocument,
     CleanedPostDocument,
     CleanedRepositoryDocument,
 )
-from llm_engineering.domain.documents import (
+from llm_twin.domain.documents import (
     ArticleDocument,
     Document,
     PostDocument,

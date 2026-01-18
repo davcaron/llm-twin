@@ -9,13 +9,11 @@ def feature_engineering(
 ) -> list[str]:
     raw_documents = fe_steps.query_data_warehouse(author_full_names, after=wait_for)
 
-    # cleaned_documents = fe_steps.clean_documents(raw_documents)
+    cleaned_documents = fe_steps.clean_documents(raw_documents)
     # last_step_1 = fe_steps.load_to_vector_db(cleaned_documents)
 
     # embedded_documents = fe_steps.chunk_and_embed(cleaned_documents)
     # last_step_2 = fe_steps.load_to_vector_db(embedded_documents)
 
     # return [last_step_1.invocation_id, last_step_2.invocation_id]
-    # print(raw_documents[:10])
-    print(raw_documents)
     return raw_documents
