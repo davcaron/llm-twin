@@ -10,10 +10,9 @@ def feature_engineering(
     raw_documents = fe_steps.query_data_warehouse(author_full_names, after=wait_for)
 
     cleaned_documents = fe_steps.clean_documents(raw_documents)
-    # last_step_1 = fe_steps.load_to_vector_db(cleaned_documents)
+    last_step_1 = fe_steps.load_to_vector_db(cleaned_documents)
 
-    # embedded_documents = fe_steps.chunk_and_embed(cleaned_documents)
-    # last_step_2 = fe_steps.load_to_vector_db(embedded_documents)
+    embedded_documents = fe_steps.chunk_and_embed(cleaned_documents)
+    last_step_2 = fe_steps.load_to_vector_db(embedded_documents)
 
-    # return [last_step_1.invocation_id, last_step_2.invocation_id]
-    return raw_documents
+    return [last_step_1.invocation_id, last_step_2.invocation_id]

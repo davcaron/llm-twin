@@ -1,7 +1,7 @@
 from .dispatchers import (
-    # ChunkingDispatcher,
+    ChunkingDispatcher,
     CleaningDispatcher,
-    # EmbeddingDispatcher,
+    EmbeddingDispatcher,
 )
 
-# __all__ = ["CleaningDispatcher", "ChunkingDispatcher", "EmbeddingDispatcher"]
+__all__ = ["CleaningDispatcher", "ChunkingDispatcher", "EmbeddingDispatcher"]
